@@ -3,18 +3,16 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="https://cdn.tailwindcss.com"></script>
-	<title>Astrolus Theme Development</title>
+    <?php wp_head(); ?>
 </head>
 <body class="bg-white dark:bg-gray-800">
 
 <div class="py-12">
 	<div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
 		<div class="mb-12 space-y-2 text-center">
-			<h2 class="text-3xl font-bold text-gray-800 md:text-4xl dark:text-white">Sharing is Caring</h2>
+			<h2 class="text-3xl font-bold text-gray-800 md:text-4xl dark:text-white"><?php echo bloginfo('name') ?></h2>
 			<p class="text-gray-600 dark:text-gray-300 lg:mx-auto lg:w-6/12">
-				Quam hic dolore cumque voluptate rerum beatae et quae, tempore sunt, debitis dolorum
-				officia aliquid explicabo? Excepturi, voluptate?
+                How shall I explain here the pains and the pleasures of happy things, and the duties of pains which, in time, are due? Will you accept it with pleasure?
 			</p>
 		</div>
 
@@ -34,11 +32,10 @@
 				<div class="sm:p-2 sm:pl-0 sm:w-4/6">
 					<span class="mt-4 mb-2 inline-block font-medium text-gray-400 dark:text-gray-500 sm:mt-0">Jul 27 2022</span>
 					<h3 class="text-2xl font-semibold text-gray-800 dark:text-white">
-						Provident de illo eveniet commodi fuga fugiat laboriosam expedita.
+                        They provide that there will be a convenient flight to escape the laborious expedient.
 					</h3>
 					<p class="my-6 text-gray-600 dark:text-gray-300">
-						Laudantium in, voluptates ex placeat quo harum aliquam totam,
-						doloribus eum impedit atque...
+                        For those who praise him, the pleasures from which he pleases all of them, he hinders him with pains and...
 					</p>
 
 					<div class="flex gap-4">
@@ -67,11 +64,10 @@
 				<div class="sm:p-2 sm:pl-0 sm:w-4/6">
 					<span class="mt-4 mb-2 inline-block font-medium text-gray-400 dark:text-gray-500 sm:mt-0">Jul 27 2022</span>
 					<h3 class="text-2xl font-semibold text-gray-800 dark:text-white">
-						Provident de illo eveniet commodi fuga fugiat laboriosam expedita.
+                        They provide that there will be a convenient flight to escape the laborious expedient.
 					</h3>
 					<p class="my-6 text-gray-600 dark:text-gray-300">
-						Laudantium in, voluptates ex placeat quo harum aliquam totam,
-						doloribus eum impedit atque...
+                        For those who praise him, the pleasures from which he pleases all of them, he hinders him with pains and...
 					</p>
 
 					<div class="flex gap-4">
@@ -100,11 +96,10 @@
 				<div class="sm:p-2 sm:pl-0 sm:w-4/6">
 					<span class="mt-4 mb-2 inline-block font-medium text-gray-400 dark:text-gray-500 sm:mt-0">Jul 27 2022</span>
 					<h3 class="text-2xl font-semibold text-gray-800 dark:text-white">
-						Provident de illo eveniet commodi fuga fugiat laboriosam expedita.
+                        They provide that there will be a convenient flight to escape the laborious expedient.
 					</h3>
 					<p class="my-6 text-gray-600 dark:text-gray-300">
-						Laudantium in, voluptates ex placeat quo harum aliquam totam,
-						doloribus eum impedit atque...
+                        For those who praise him, the pleasures from which he pleases all of them, he hinders him with pains and...
 					</p>
 
 					<div class="flex gap-4">
@@ -120,5 +115,6 @@
 		</div>
 	</div>
 </div>
+<?php wp_footer(); ?>
 </body>
 </html>
