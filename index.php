@@ -28,18 +28,11 @@
 				<div class="sm:p-2 sm:pl-0 sm:w-4/6">
 					<span class="mt-4 mb-2 inline-block font-medium text-gray-400 dark:text-gray-500 sm:mt-0"><?php echo the_date()?></span>
                     <?php the_title('<h3 class="text-2xl font-semibold text-gray-800 dark:text-white">', '</h3>'); ?>
-					<p class="my-6 text-gray-600 dark:text-gray-300">
-                        <?php the_content();?>
+					<p class="my-6 text-gray-300 dark:text-white">
+                        <?php the_excerpt();?>
 					</p>
+                    <?php custom_get_the_tag_list(); ?>
 
-					<div class="flex gap-4">
-						<a href="#" class="px-3 py-1 rounded-full border border-gray-100 text-sm font-medium text-primary transition duration-300 hover:border-transparent hover:bg-primary hover:text-white dark:border-gray-700 dark:text-gray-300">
-							Tailwindcss
-						</a>
-						<a href="#" class="px-3 py-1 rounded-full border border-gray-100 text-sm font-medium text-primary transition duration-300 hover:border-transparent hover:bg-primary hover:text-white dark:border-gray-700 dark:text-gray-300">
-							VueJS
-						</a>
-					</div>
 				</div>
 			</div>
             <?php endwhile; endif; ?>
