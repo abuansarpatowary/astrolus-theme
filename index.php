@@ -37,6 +37,15 @@
 			</div>
             <?php endwhile; endif; ?>
 
+            <div class="text-center text-gray-400 dark:text-white text-xl">
+	            <?php the_posts_pagination(array(
+		            'mid_size' => 2,
+		            'prev_text' => __('« Prev'),
+		            'next_text' => __('Next »'),
+		            'screen_reader_text' => ' ',
+	            )); ?>
+            </div>
+
 		</div>
 	</div>
 </div>
