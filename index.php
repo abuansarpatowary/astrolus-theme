@@ -27,7 +27,7 @@
 
 				<div class="sm:p-2 sm:pl-0 sm:w-4/6">
 					<span class="mt-4 mb-2 inline-block font-medium text-gray-400 dark:text-gray-500 sm:mt-0"><?php echo get_the_date()?></span>
-                    <?php the_title('<h3 class="text-2xl font-semibold text-gray-800 dark:text-white">', '</h3>'); ?>
+                    <a href="<?php the_permalink();?>"><?php the_title('<h3 class="text-2xl font-semibold text-gray-800 dark:text-white">', '</h3>'); ?></a>
 					<p class="my-6 text-gray-300 dark:text-white">
                         <?php the_excerpt();?>
 					</p>
@@ -37,7 +37,7 @@
 			</div>
             <?php endwhile; endif; ?>
 
-            <div class="text-center text-gray-400 dark:text-white text-xl">
+            <div class="mt-4 text-center text-gray-400 dark:text-white text-xl">
 	            <?php the_posts_pagination(array(
 		            'mid_size' => 2,
 		            'prev_text' => __('« Prev'),
