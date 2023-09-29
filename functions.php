@@ -24,3 +24,17 @@ function astrolus_custom_tag_list() {
 		echo '</div>';
 	}
 }
+
+
+function astrolus_widgets_register(){
+	register_sidebar(array(
+		'name' => 'Footer Widget',
+		'id' => 'footer_widget',
+		'description' => 'Footer Widget Area',
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '',
+		'after_title' => '',
+	));
+}
+add_action('widgets_init', 'astrolus_widgets_register');

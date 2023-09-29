@@ -4,18 +4,11 @@
     <div class="container m-auto space-y-6 text-gray-600 dark:text-gray-300">
         <div class="flex flex-col items-center justify-center space-y-4">
             <a href="#" class="text-3xl font-bold text-gray-800 dark:text-white"
-            >Astrolus</a
-            >
+            >Astrolus</a>
         </div>
-      <ul
-        role="list"
-        class="flex flex-col items-center justify-center gap-4 py-4 sm:flex-row sm:gap-8"
-      >
-        <li role="listitem"><a href="#" class="hover:text-primary">Home</a></li>
-        <li role="listitem"><a href="#" class="hover:text-primary">Features</a></li>
-        <li role="listitem"><a href="#" class="hover:text-primary">Get started</a></li>
-        <li role="listitem"><a href="#" class="hover:text-primary">About us</a></li>
-      </ul>
+      <?php if (is_active_sidebar('footer_widget')) : ?>
+          <?php dynamic_sidebar('footer_widget'); ?>
+        <?php endif; ?>
       <div class="m-auto flex w-max items-center justify-between space-x-4">
         <a href="tel:+243996660436" aria-label="call">
           <svg

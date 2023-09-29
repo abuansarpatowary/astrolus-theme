@@ -9,12 +9,7 @@
 
 <div class="py-12">
 	<div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
-		<div class="mb-12 space-y-2 text-center">
-			<h2 class="text-3xl font-bold text-gray-800 md:text-4xl dark:text-white"><?php echo bloginfo('name') ?></h2>
-			<p class="text-gray-600 dark:text-gray-300 lg:mx-auto lg:w-6/12">
-                <?php echo bloginfo('description') ?>
-			</p>
-		</div>
+		<?php get_header(); ?>
 
 		<div class="lg:w-3/4 xl:w-2/4 lg:mx-auto">
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>

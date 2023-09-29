@@ -9,6 +9,7 @@
 
 
 <div class="py-16">
+  <?php get_header(); ?>
   <div class="xl:container m-auto px-6 text-gray-600 dark:text-gray-200 md:px-12 xl:px-16">
     <div class="dark:lg:bg-darker lg:p-16 rounded-[4rem] space-y-6 md:flex flex-row-reverse md:gap-6 justify-center md:space-y-0 lg:items-center">
       <div class="md:5/12 lg:w-1/2">
