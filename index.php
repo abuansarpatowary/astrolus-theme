@@ -31,7 +31,7 @@
 					<p class="my-6 text-gray-300 dark:text-white">
                         <?php the_excerpt();?>
 					</p>
-                    <?php custom_get_the_tag_list(); ?>
+                    <?php astrolus_custom_tag_list(); ?>
 
 				</div>
 			</div>

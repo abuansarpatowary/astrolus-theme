@@ -13,11 +13,7 @@ function astrolus_enequeue_scripts(){
 }
 add_action('wp_enqueue_scripts', 'astrolus_enequeue_scripts');
 
-//function custom_excerpt_length( $length ) {
-//	return 100;
-//}
-//add_filter( 'excerpt_length', 'custom_excerpt_length');
-function custom_get_the_tag_list() {
+function astrolus_custom_tag_list() {
 	$tags = get_the_tags();
 
 	if ($tags) {
