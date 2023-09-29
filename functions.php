@@ -4,6 +4,9 @@ function astrolus_theme_support(): void {
 	load_theme_textdomain('astrolus');
 	add_theme_support('title-tag');
 	add_theme_support('post-thumbnails');
+	add_theme_support( 'custom-logo', array(
+		'width'  => 150,
+	) );
 }
 add_action('after_setup_theme', 'astrolus_theme_support');
 
