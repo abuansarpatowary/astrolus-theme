@@ -14,6 +14,22 @@ function astrolus_theme_support(): void {
 }
 add_action('after_setup_theme', 'astrolus_theme_support');
 
+function astrolus_add_additional_class_on_a($atts, $item) {
+	if (property_exists($item, 'classes')) {
+		$atts['class'] = 'relative text-gray-600 dark:text-white hover:text-yellow-500 before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left dark:before:bg-yellow-500 before:mx-auto before:mt-auto before:rounded-full before:bg-yellow-800 before:transition before:scale-x-0 group-hover:before:scale-x-100';
+	}
+	return $atts;
+}
+add_filter('nav_menu_link_attributes', 'astrolus_add_additional_class_on_a',  10, 2 );
+
+function astrolus_add_additional_class_on_li($classes, $item) {
+	if (property_exists($item, 'classes')) {
+		$classes[] = 'block md:px-3 group';
+	}
+	return $classes;
+}
+add_filter('nav_menu_css_class', 'astrolus_add_additional_class_on_li', 10, 2);
+
 function astrolus_enequeue_scripts(){
 	
 	wp_enqueue_script('tailwind-js', 'https://cdn.tailwindcss.com', array(), '1.0.0', false);

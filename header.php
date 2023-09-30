@@ -41,34 +41,17 @@
                         <img src="images/logo.svg" class="w-36 grayscale contrast-200" alt="tailus logo" width="144" height="68">
                     </a>
                 </div>
+                
                 <div class="block w-full h-full md:h-auto">
-                    <ul class="space-y-8 tracking-wide font-medium md:flex md:space-y-0">
-                        <li>
-                            <a href="#" class="block md:px-3">
-                                <div class="relative text-yellow-800 dark:text-yellow-300
-                                            before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left dark:before:bg-yelloe-500 before:mx-auto before:mt-auto before:rounded-full before:bg-yellow-800">
-                                    <span>Nike</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="block md:px-3 group">
-                                <div class="relative text-gray-600
-                                            before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left dark:before:bg-yelloe-500 before:mx-auto before:mt-auto before:rounded-full before:bg-yellow-800 before:transition before:scale-x-0 group-hover:before:scale-x-100">
-                                    <span class="transition group-hover:text-yellow-700 dark:text-gray-300 dark:group-hover:text-yellow-300">Adiddas</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="block md:px-3 group">
-                                <div class="relative text-gray-600
-                                            before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left dark:before:bg-yelloe-500 before:mx-auto before:mt-auto before:rounded-full before:bg-yellow-800 before:transition before:scale-x-0 group-hover:before:scale-x-100">
-                                    <span class="transition group-hover:text-yellow-700 dark:text-gray-300 dark:group-hover:text-yellow-300">Cart</span>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
+                    <?php
+                    wp_nav_menu(array(
+                        'theme_location' => 'main',
+                        'container' => '',
+                        'menu_class' => 'space-y-8 gap-4 tracking-wide font-medium md:flex md:space-y-0',
+                    ));
+                    ?>
                 </div>
+
 
                 <div class="w-full gap-y-4 md:w-max md:gap-y-0 md:gap-x-4 flex md:flex-row flex-col">
                     <button type="button" title="Start buying" class="group w-full py-3 px-6 text-center transition dark:active:bg-yellow-800 dark:focus:bg-yellow-900 active:bg-yellow-200 focus:bg-yellow-100 sm:w-max">
