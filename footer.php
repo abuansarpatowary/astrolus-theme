@@ -6,9 +6,12 @@
             <a href="#" class="text-3xl font-bold text-gray-800 dark:text-white"
             >Astrolus</a>
         </div>
-      <?php if (is_active_sidebar('footer_widget')) : ?>
-          <?php dynamic_sidebar('footer_widget'); ?>
-        <?php endif; ?>
+      <?php wp_nav_menu(array(
+        'theme_location' => 'footer',
+        'container' => false,
+        'menu_class' => 'flex flex-col items-center justify-center gap-4 py-4 sm:flex-row sm:gap-8',
+      )); ?>
+      
       <div class="m-auto flex w-max items-center justify-between space-x-4">
         <a href="tel:+243996660436" aria-label="call">
           <svg
@@ -61,11 +64,11 @@
         </a>
       </div>
 
-      <div class="text-center">
-        <span class="text-sm tracking-wide"
-          >Copyright &copy; Astrolus <span id="year"></span> | All right reserved</span
-        >
-      </div>
+      <?php if (is_active_sidebar('footer_widget')) : ?>
+          <?php dynamic_sidebar('footer_widget'); ?>
+        <?php endif; ?>
+
+      
     </div>
   </div>
 </footer>

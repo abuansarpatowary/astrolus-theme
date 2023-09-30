@@ -7,6 +7,10 @@ function astrolus_theme_support(): void {
 	add_theme_support( 'custom-logo', array(
 		'width'  => 150,
 	) );
+	register_nav_menus(array(
+		'main' => __('Main Menu', 'astrolus'),
+		'footer' => __('Footer Menu', 'astrolus'),
+	));
 }
 add_action('after_setup_theme', 'astrolus_theme_support');
 
@@ -16,6 +20,7 @@ function astrolus_enequeue_scripts(){
 }
 add_action('wp_enqueue_scripts', 'astrolus_enequeue_scripts');
 
+// added_custom_tag style
 function astrolus_custom_tag_list() {
 	$tags = get_the_tags();
 
@@ -31,9 +36,9 @@ function astrolus_custom_tag_list() {
 
 function astrolus_widgets_register(){
 	register_sidebar(array(
-		'name' => 'Footer Widget',
+		'name' => _('Footer Widget', 'astrolus'),
 		'id' => 'footer_widget',
-		'description' => 'Footer Widget Area',
+		'description' => _('Footer Widget Area', 'astrolus'),
 		'before_widget' => '',
 		'after_widget' => '',
 		'before_title' => '',
