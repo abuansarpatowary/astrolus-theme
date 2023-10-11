@@ -6,11 +6,10 @@
     <?php wp_head(); ?>
 </head>
 <body class="bg-white dark:bg-gray-800"  <?php body_class(); ?>>
+<?php get_header(); ?>
 
 <div class="py-12">
 	<div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
-		<?php get_header(); ?>
-
 		<div class="lg:w-3/4 xl:w-2/4 lg:mx-auto">
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<div class="group relative -mx-4 sm:-mx-8 p-6 sm:p-8 rounded-3xl bg-white dark:bg-transparent border border-transparent hover:border-gray-100 dark:shadow-none dark:hover:border-gray-700 dark:hover:bg-gray-800 shadow-2xl shadow-transparent hover:shadow-gray-600/10 sm:gap-8 sm:flex transition duration-300 hover:z-10"  <?php post_class(); ?>>

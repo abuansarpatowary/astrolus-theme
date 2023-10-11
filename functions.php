@@ -3,6 +3,7 @@
 function astrolus_theme_support(): void {
 	load_theme_textdomain('astrolus');
 	add_theme_support('title-tag');
+	add_theme_support('custom-header');
 	add_theme_support('post-thumbnails');
 	add_theme_support( 'custom-logo', array(
 		'width'  => 150,
@@ -16,7 +17,7 @@ add_action('after_setup_theme', 'astrolus_theme_support');
 
 function astrolus_add_additional_class_on_a($atts, $item) {
 	if (property_exists($item, 'classes')) {
-		$atts['class'] = 'relative text-gray-600 dark:text-white hover:text-yellow-500 before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left dark:before:bg-yellow-500 before:mx-auto before:mt-auto before:rounded-full before:bg-yellow-800 before:transition before:scale-x-0 group-hover:before:scale-x-100';
+		$atts['class'] = 'block md:px-3';
 	}
 	return $atts;
 }
