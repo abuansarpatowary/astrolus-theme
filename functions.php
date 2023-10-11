@@ -3,7 +3,16 @@
 function astrolus_theme_support(): void {
 	load_theme_textdomain('astrolus');
 	add_theme_support('title-tag');
-	add_theme_support('custom-header');
+	$astrolus_custom_header_details = array(
+		'header-text' => true,
+		'default-text-color' => '#fff',
+		'width' => 1200,
+		'height' => 600,
+		'flex-width' => true,
+		'flex-height' => true,
+		'video' => true,
+	);
+	add_theme_support('custom-header', $astrolus_custom_header_details);
 	add_theme_support('post-thumbnails');
 	add_theme_support( 'custom-logo', array(
 		'width'  => 150,
@@ -49,6 +58,21 @@ function astrolus_custom_tag_list() {
 		echo '</div>';
 	}
 }
+
+//added style in header banner
+function astrolus_header_banner_style(){
+	if(current_theme_supports('custom-header')){?>
+
+	<style>
+		.container h1, p{
+			color: #<?php echo get_header_textcolor(); ?>;
+		}
+	</style>
+
+<?php
+}
+}
+add_action('wp_head', 'astrolus_header_banner_style');
 
 
 function astrolus_widgets_register(){

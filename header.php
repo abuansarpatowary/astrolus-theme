@@ -8,7 +8,7 @@
                         if ( function_exists( 'the_custom_logo' ) ) {
                             the_custom_logo();
                             ?>
-                            <span class="text-gray-600 dark:text-white text-2xl">Astrolus</span>
+                            <span class="text-gray-600 dark:text-white text-2xl ml-4">Astrolus</span>
                             <?php
                         }else{
                             ?>
