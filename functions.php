@@ -17,6 +17,7 @@ function astrolus_theme_support(): void {
 	add_theme_support( 'custom-logo', array(
 		'width'  => 150,
 	) );
+	add_theme_support('custom-background');
 	register_nav_menus(array(
 		'main' => __('Main Menu', 'astrolus'),
 		'footer' => __('Footer Menu', 'astrolus'),
